@@ -1,2 +1,1 @@
-# Snakegameonline
-Created with CodeSandbox
+Snake game, 
