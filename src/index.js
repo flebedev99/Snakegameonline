@@ -245,13 +245,14 @@ pbtn.onclick = function startsingleplayer() {
   //prompt the user for name
   var getname = prompt("Enter your name", "If you are Declan then you get a headstart");
   //record name when answered
-  if (getname === "Declan"){
-    score = 40;
-    
-  }
+  
   username = getname + ": ";
   twoplrbtn.style.visibility = "hidden";
   drawGame();
+  if (getname === "Declan" && confirm("Are you sure you are Declan? If you are NOT Declan then press cancel") === true){
+    
+    score = 40;
+  }
 };
 
 //Tell the user that this mode is unavaliable
