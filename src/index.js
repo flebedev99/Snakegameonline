@@ -243,8 +243,12 @@ function keyDown(event) {
 pbtn.onclick = function startsingleplayer() {
   pbtn.style.visibility = "hidden";
   //prompt the user for name
-  var getname = prompt("Enter your name");
+  var getname = prompt("Enter your name", "If you are Declan then you get a headstart");
   //record name when answered
+  if (getname === "Declan"){
+    score = 40;
+    
+  }
   username = getname + ": ";
   twoplrbtn.style.visibility = "hidden";
   drawGame();
