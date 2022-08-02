@@ -243,14 +243,14 @@ function keyDown(event) {
 pbtn.onclick = function startsingleplayer() {
   pbtn.style.visibility = "hidden";
   //prompt the user for name
-  var getname = prompt("Enter your name", "If you are Declan then you get a headstart");
+  var getname = prompt("Enter your name", "Or enter password to get a headstart");
   //record name when answered
   
   username = getname + ": ";
   twoplrbtn.style.visibility = "hidden";
   drawGame();
-  if (getname === "Declan" && confirm("Are you sure you are Declan? If you are NOT Declan then press cancel") === true){
-    
+  if (getname === "Declan" && confirm("Are you sure you have permission? If you don't then press cancel") === true){
+    playsound();
     score = 40;
   }
 };
