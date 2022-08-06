@@ -35,6 +35,7 @@ let highscore = document.cookie;
 let username = "Unknown";
 
 let gamesrunning = 0;
+let password = "fatty";
 
 //game loop
 function drawGame() {
@@ -249,9 +250,9 @@ pbtn.onclick = function startsingleplayer() {
   username = getname + ": ";
   twoplrbtn.style.visibility = "hidden";
   drawGame();
-  if (getname === "Declan" && confirm("Are you sure you have permission? If you don't then press cancel") === true){
+  if (getname === password && confirm("Are you sure? This can damage your high score.") === true){
     playsound();
-    score = 40;
+    score = 80;
   }
 };
 
